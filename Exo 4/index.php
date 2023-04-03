@@ -2,8 +2,8 @@
 
 // Connexion à la base de données
 $servername = "10.170.10.29";
-$username = "eleve";
-$password = "esn";
+$username = "root";
+$password = "";
 $dbname = "BDD_Romero";
 
 $conn = new mysqli($servername, $username, $password, $dbname);
@@ -25,12 +25,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $password = mysqli_real_escape_string($conn, $password);
 
     // Requête SQL pour insérer les données dans la table "utilisateurs"
-    $sql = "INSERT INTO user (username, password) VALUES ('$username', '$password')";
+    $sql = "INSERT INTO user (mail, password) VALUES ('$username', '$password')";
 
     if ($conn->query($sql) === TRUE) {
-        echo "Les données ont été ajoutées avec succès !";
+        echo json_encode("Les données ont été ajoutées avec succès !");
     } else {
-        echo "Erreur: " . $sql . "<br>" . $conn->error;
+        echo json_encode("Erreur: ") . $sql . "<br>" . $conn->error;
     }
 
     // Ferme la connexion à la base de données
