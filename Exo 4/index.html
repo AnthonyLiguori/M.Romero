@@ -8,17 +8,17 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <form method="post">
+    <form method="post" action="index.php">
       <div class="box">
         <div class="form">
           <h2>Sign in</h2>
           <div class="inputBox">
-            <input type="text" name="username" required="required" />
+            <input type="text" name="username" id="username" required="required" />
             <span>Username</span>
             <i></i>
           </div>
           <div class="inputBox">
-            <input type="password" name="password" required="required" />
+            <input type="password" name="password" id="password" required="required" />
             <span>Password</span>
             <i></i>
           </div>
@@ -26,7 +26,7 @@
             <a href="#">Forgot Password</a>
             <a href="#">Signup</a>
           </div>
-          <input type="submit" value="Login" />
+          <input type="submit" name="login" value="Login" />
         </div>
       </div>
     </form>

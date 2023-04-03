@@ -2,9 +2,9 @@
 
 // Connexion à la base de données
 $servername = "10.170.10.29";
-$username = "nom_utilisateur";
-$password = "mot_de_passe";
-$dbname = "nom_de_la_base_de_donnees";
+$username = "eleve";
+$password = "esn";
+$dbname = "BDD_Romero";
 
 $conn = new mysqli($servername, $username, $password, $dbname);
 
@@ -25,7 +25,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $password = mysqli_real_escape_string($conn, $password);
 
     // Requête SQL pour insérer les données dans la table "utilisateurs"
-    $sql = "INSERT INTO utilisateurs (username, password) VALUES ('$username', '$password')";
+    $sql = "INSERT INTO user (username, password) VALUES ('$username', '$password')";
 
     if ($conn->query($sql) === TRUE) {
         echo "Les données ont été ajoutées avec succès !";
