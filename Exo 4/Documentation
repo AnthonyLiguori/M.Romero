@@ -1,0 +1,14 @@
+Participants :
+Ilan DOUMENC
+Anthony LIGUORI
+Quentin BLASCO
+
+Outils :
+Apache
+Vitualbox (DEBIAN 11)
+MySQL
+Visual Studio Code
+MobaXterm
+
+Pour réaliser ce TP, Quentin a créé une VM sur son poste et mis en place le serveur WEB Apache et l’installation des packages MySQL. Ilan s’est occupé de mettre en place la base de données et Anthony a réalisé tout le code.
+La connexion est établie grâce à une connexion SSH sur le logiciel MobaXterm.
